@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  scrapper:
+    container_name: scapper
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/workspace
+    tty: true
+    stdin_open: true
+    command: bash
